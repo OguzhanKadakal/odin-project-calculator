@@ -10,12 +10,15 @@
 </head>
 <body>
     <div id="calculator">
-        <input id="display" type="text" disabled>
+        <div id="display-container">
+            <input id="display-top" class="display-screen" type="text" disabled>
+            <input id="display" class="display-screen" type="text" disabled>
+        </div>
         <div id="button-container">
-            <button id="allClear" class="btn-delete">AC</button>
-            <button id="delete" class="btn-delete"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="allClear" class="btn delete">AC</button>
+            <button id="deleteArrow" class="btn delete"><i class="fa-solid fa-delete-left"></i></button>
             <button id="modular" class="btn modular">%</button>
-            <button id="divide" class="btn-operator"><i class="fa-solid fa-divide"></i></button>
+            <button id="divide" class="btn operator"><i class="fa-solid fa-divide"></i></button>
 
             <button id="seven" class="btn number">7</button>
             <button id="eight" class="btn number">8</button>
@@ -33,9 +36,9 @@
             <button id="add" class="btn operator">+</button>
 
             <button id="positiveToNegative" class="btn">+/-</button>
-            <button id="zero" class="btn number"></button>
-            <button id="decimal" class="btn decimal-symbol"></button>
-            <button id="equals" class="btn-equal">=</button>
+            <button id="zero" class="btn number">0</button>
+            <button id="decimal" class="btn decimal-symbol">-</button>
+            <button id="equals" class="btn equal">=</button>
         </div>
     </div>
 </body>
