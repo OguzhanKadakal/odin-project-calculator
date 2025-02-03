@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Digital-7 Mono', sans-serif;
+}
+
+h1 {
+    font-family: 'Digital-7 Mono', sans-serif;
+}
+                
