@@ -1,31 +1,56 @@
-@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Digital-7 Mono', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #calculator {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 97%;
+    width: 90%;
     max-width: 400px;
-    margin: 6rem auto;
-    background-color: aquamarine;
+    margin: 3rem auto;
     gap: 1rem;
     padding: 1rem;
+}
+
+/*Display Screen*/
+#display-container {
+    display: flex;
+    flex-direction: column;
 }
 
 #display-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
+.display-screen {
+    text-align: right;
+    width: 100%;
+    border: none;
+    padding: 0.6rem;
+}
+
+#display-top {
+    font-size: 1.2rem; 
+    max-height: 60px; 
+    overflow: hidden;
+}
+
+#display-bottom {
+    font-size: 2rem;
+    max-height: 120px;
+    overflow: hidden;
+    padding-top: 0;
+}
+
+
+
+/*Buttons*/
 #button-container {
     display: flex;
     flex-wrap: wrap;
