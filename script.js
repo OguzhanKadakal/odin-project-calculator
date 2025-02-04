@@ -8,23 +8,38 @@ const equalsButton = document.querySelector("#equals");
 const decimalButton = document.querySelector("#decimal");
 const signButton = document.querySelector("#sign");
 
-let displayValue = "4434";  // The value displayed on the calculator
-let firstOperand = "";  // The first operand
-let secondOperand = ""; // The second operand
+let displayValue = "";  // The value displayed on the calculator
+let displayValueTop = "";  // The value displayed on the top of the calculator
+let firstNumber = "";  // The first operand
+let secondNumber = ""; // The second operand
 let operator = "";      // The operator
 let result = "";        // The result of the operation
 
+// Function to operate the calculator
+
+
+// Function to handle number button clicks
+numberButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        if (displayValue === "0") {
+            displayValue = button.textContent;
+        } else {
+            displayValue += button.textContent;
+        }
+        updateDisplay();
+    });
+});
 // Function to update the display
 function updateDisplay() {
     displayBottom.value = displayValue;
 }
 updateDisplay();
-
 // Function to clear the display
 clearButton.addEventListener("click", () => {
     displayValue = "0";
-    firstOperand = "";
-    secondOperand = "";
+    displayValueTop = ""
+    firstNumber = "";
+    secondNumber = "";
     operator = "";
     result = "";
     updateDisplay();
