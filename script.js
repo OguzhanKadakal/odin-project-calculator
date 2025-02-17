@@ -37,26 +37,25 @@ function updateDisplay() {
 function updateDisplayTop() {
   displayTop.value = displayValueTop;
 }
-
 // Function to handle operator button clicks
 operatorButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (firstNumber === "") {
-      firstNumber = displayValue;
-      operator = button.textContent;
-      displayValueTop = firstNumber + " " + operator;
-      displayValue = "";
-    } else {
-      secondNumber = displayValue;
-      displayValueTop = firstNumber + " " + operator + " " + secondNumber;
-      operate();
-      firstNumber = result;
-      operator = button.textContent;
-      displayValue = "";
-    }
-    updateDisplay();
-    updateDisplayTop();
-  });
+    button.addEventListener("click", () => {
+        if (firstNumber === "") {
+            firstNumber = displayValue;
+            operator = button.textContent;
+            displayValueTop = firstNumber + " " + operator;
+            displayValue = "";
+        } else {
+            secondNumber = displayValue;
+            displayValueTop = firstNumber + " " + operator + " " + secondNumber;
+            operate();
+            firstNumber = result;
+            operator = button.textContent;
+            displayValue = "";
+        }
+        updateDisplay();
+        updateDisplayTop();
+    });
 });
 
 // Function to handle the equals button click
@@ -77,14 +76,14 @@ equalsButton.addEventListener("click", () => {
 updateDisplay();
 // Function to clear the display
 clearButton.addEventListener("click", () => {
-    displayValue = "0";
-    displayValueTop = "";
-    firstNumber = "";
-    secondNumber = "";
-    operator = "";
-    result = "";
-    updateDisplay();
-    updateDisplayTop();
+  displayValue = "0";
+  displayValueTop = "";
+  firstNumber = "";
+  secondNumber = "";
+  operator = "";
+  result = "";
+  updateDisplay();
+  updateDisplayTop();
 });
 
 // Function to delete the last character
@@ -124,6 +123,9 @@ function operate() {
     case "*":
       result = multiply(parseFloat(firstNumber), parseFloat(secondNumber));
       break;
+    case "%":
+      result = percentage(parseFloat(firstNumber), parseFloat(secondNumber));
+      break;
     case "/":
       if (secondNumber === "0") {
         result = "Error";
@@ -150,7 +152,10 @@ function divide(a, b) {
   return a / b;
 }
 
-
+//Function to percentage
+function percentage(a, b) {
+  return (a * b) / 100;
+}
 
 // Function to handle keyboard inputs
 document.addEventListener("keydown", (e) => {
