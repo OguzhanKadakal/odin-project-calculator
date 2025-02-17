@@ -150,6 +150,8 @@ function divide(a, b) {
   return a / b;
 }
 
+
+
 // Function to handle keyboard inputs
 document.addEventListener("keydown", (e) => {
   if (e.key >= 0 && e.key <= 9) {
