@@ -124,7 +124,7 @@ function operate() {
     case "*":
       result = multiply(parseFloat(firstNumber), parseFloat(secondNumber));
       break;
-    case "÷":
+    case "/":
       if (secondNumber === "0") {
         result = "Error";
       } else {
